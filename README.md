@@ -8,16 +8,16 @@ Epistemic Network Analysis (ENA) is a method used to identify meaningful and qua
 The demo script demonstrates how to use the rENA package to run ENA on a dataset. The script shows the result of T-test, Wilcoxon test and show the effect size Cohen'd. 
 
 ## Quick Start
-1. Download the repository manually.
+1. Download the repository manually and unzip the ZIP file.
+
 	Alternatively, you could clone the repository with the command:
-	```cmd
+	```python
 	# Clone the repository
 	git clone https://github.com/katcom/rENA-demo
 	```
  2. Open the RStudio and set the current working directory to the folder in RStudio
 	```
 	setwd("some_path_to/rENA-demo")
-
 	```
 3. Load the libraries and read the dataset
 	```
@@ -27,10 +27,9 @@ The demo script demonstrates how to use the rENA package to run ENA on a dataset
 	
 	# load data
 	enaData <- read_excel(toString('data.xlsx'))
-	
 	```
-4. Select the units and conversions for ENA. **You may want to change these variables when you build the ENA model on your own dataset**.
-	```
+4. Select the units and conversions for ENA. <span style="color:green">**You may want to change the `unit` and `conversation` variables when you build the ENA model on your own dataset**.</span>
+	```python
 	# selecting units for ENA
 	units = c("groupid","username")
 	
@@ -39,7 +38,6 @@ The demo script demonstrates how to use the rENA package to run ENA on a dataset
 	
 	# selecting code columns 
 	codes = c('Q1', 'Q2', 'Q3', 'R1', 'R2','R3', 'S1', 'S2', 'S3','C1', 'C2', 'C3')
-	
 	```
 5. Build the ENA model and run the analysis. Note that we set the param `runTest = True` so that the T-test and Wilcox are run once the model is built.
 	```R
@@ -63,7 +61,8 @@ The demo script demonstrates how to use the rENA package to run ENA on a dataset
 	print(ena_obj$tests)
 	```
 	The stats result should look like.
-	```
+	```python
+	> print(ena_obj$tests)
 	$wilcox.test
 	$wilcox.test$test.dim1
 
