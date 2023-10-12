@@ -28,7 +28,7 @@ The demo script demonstrates how to use the rENA package to run ENA on a dataset
 	# load data
 	enaData <- read_excel(toString('data.xlsx'))
 	```
-4. Select the units and conversions for ENA. <span style="color:green">**You may want to change the `unit` and `conversation` variables when you build the ENA model on your own dataset**.</span>
+4. Select the units and conversions for ENA. 🟩<span style="color:green">**You may want to change the `unit` and `conversation` variables when you build the ENA model on your own dataset**.</span>🟩
 	```python
 	# selecting units for ENA
 	units = c("groupid","username")
