@@ -119,8 +119,8 @@ However, although the means are different, you should notice that the p-value an
 
 Therefore, if you want to have the same results from rENA to the web, you should turn off the scaling and run the test again, as shown below. 
 ![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_in_rENA.JPG)
-![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_with_scaling_on.JPG.JPG)
+![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_with_scaling_on.JPG)
 
 Now we turn off the scaling on the Plot Tools in the web toolkit, the result would be identical to the rENA
 ![Turn off scaling](https://github.com/katcom/rENA-demo/blob/main/images/turn_off_scaling.JPG)
-![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_with_scaling_off.JPG.JPG)
+![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_with_scaling_off.JPG)
