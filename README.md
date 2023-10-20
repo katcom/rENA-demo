@@ -28,7 +28,7 @@ The demo script demonstrates how to use the rENA package to run ENA on a dataset
 	# load data
 	enaData <- read_excel(toString('data.xlsx'))
 	```
-4. Select the units and conversions for ENA. 🟩<span style="color:green">**You may want to change the `unit` and `conversation` variables when you build the ENA model on your own dataset**.</span>🟩
+4. Select the units and conversions for ENA. 🟩<span style="color:green">**You may want to change the `unit`, `codes` and `conversation` variables when you build the ENA model on your own dataset**.</span>🟩
 	```python
 	# selecting units for ENA
 	units = c("groupid","username")
@@ -113,6 +113,14 @@ The demo script demonstrates how to use the rENA package to run ENA on a dataset
 	```
 
 ## Pitfalls
-You should note that the calculated means from T-test and Wilcoxon are not the same as those from the web toolkit. The cause is still unknown. If you solve this problem, feel free to make a pull request.
+You should note that the calculated means from T-test and Wilcoxon are not the same as those from the web toolkit, due to the scaling feature in the web. Since on the web toolkit calculates the means using the scaled points in the graph, the means would also be scaled and therefore different from the result from rENA. 
 
-We also include a stats function from [rENA API package](https://gitlab.com/epistemic-analytics/qe-packages/rENAPI/-/blob/main/R/group.stats.R?ref_type=heads) which runs different tests and calculate the stats on two groups. You could compare the result with ours. In our experiment, the mean values from the function are the same as the result of our test, and therefore differ from those on the web toolkit. 
+However, although the means are different, you should notice that the p-value and the effect size remain the same since the points are just scaled and during the calculation of T-test and Wilcoxon the scaling factor would be canceled out. Hence, only the means differs.
+
+Therefore, if you want to have the same results from rENA to the web, you should turn off the scaling and run the test again, as shown below. 
+[Result from rENA](https://github.com/katcom/rENA-demo/images/Result_in_rENA.JPG)
+[Result from rENA](https://github.com/katcom/rENA-demo/images/Result_with_scaling_on.JPG.JPG)
+
+Now we turn off the scaling on the Plot Tools in the web toolkit, the result would be identical to the rENA
+[Turn off scaling](https://github.com/katcom/rENA-demo/images/turn_off_scaling.JPG)
+[Result from rENA](https://github.com/katcom/rENA-demo/images/Result_with_scaling_off.JPG.JPG)
