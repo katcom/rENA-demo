@@ -118,9 +118,15 @@ You should note that the calculated means from T-test and Wilcoxon are not the s
 However, although the means are different, you should notice that the p-value and the effect size remain the same since the points are just scaled and during the calculation of T-test and Wilcoxon the scaling factor would be canceled out. Hence, only the means differs.
 
 Therefore, if you want to have the same results from rENA to the web, you should turn off the scaling and run the test again, as shown below. 
+
+`This is the result from rENA`
 ![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_in_rENA.JPG)
+
+`This is the result from the web`
 ![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_with_scaling_on.JPG)
 
-Now we turn off the scaling on the Plot Tools in the web toolkit, the result would be identical to the rENA
+`Now we turn off the scaling on the Plot Tools in the web toolkit, the result would be identical to the rENA`
 ![Turn off scaling](https://github.com/katcom/rENA-demo/blob/main/images/turn_off_scaling.JPG)
+
+`The result becomes the same with rENA after turning off scaling`
 ![Result from rENA](https://github.com/katcom/rENA-demo/blob/main/images/Result_with_scaling_off.JPG)
